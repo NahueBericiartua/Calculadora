@@ -195,5 +195,63 @@ namespace Calculadora
 			txt_resultado.Text = "0";
 			aux2 = false;			
 		}
+		
+		void MainFormKeyPress(object sender, KeyPressEventArgs e)
+		{
+			if(e.KeyChar == Convert.ToChar(Keys.A)){
+			
+			}
+		}
+		
+		void MainFormKeyDown(object sender, KeyEventArgs e)
+		{
+			if(e.KeyCode == Keys.NumPad1 || e.KeyCode == Keys.D1){
+				Btn_0Click(btn_1,e);
+			}
+			if(e.KeyCode == Keys.NumPad2 || e.KeyCode == Keys.D2){
+				//btn_1.PerformClick();
+				Btn_0Click(btn_2,e);
+			}
+			if(e.KeyCode == Keys.NumPad3 || e.KeyCode == Keys.D3){
+				//btn_1.PerformClick();
+				Btn_0Click(btn_3,e);
+			}
+			if(e.KeyCode == Keys.NumPad4 || e.KeyCode == Keys.D4){
+				//btn_1.PerformClick();
+				Btn_0Click(btn_4,e);
+			}
+			if(e.KeyCode == Keys.NumPad5 || e.KeyCode == Keys.D5){
+				//btn_1.PerformClick();
+				Btn_0Click(btn_5,e);
+			}
+			if(e.KeyCode == Keys.NumPad6 || e.KeyCode == Keys.D6){
+				//btn_1.PerformClick();
+				Btn_0Click(btn_6,e);
+			}
+			if(e.KeyCode == Keys.NumPad7 || e.KeyCode == Keys.D7){
+				//btn_1.PerformClick();
+				Btn_0Click(btn_7,e);
+			}
+			if(e.KeyCode == Keys.NumPad8 || e.KeyCode == Keys.D8){
+				//btn_1.PerformClick();
+				Btn_0Click(btn_8,e);
+			}
+			if(e.KeyCode == Keys.NumPad9 || e.KeyCode == Keys.D9){
+				//btn_1.PerformClick();
+				Btn_0Click(btn_9,e);
+			}
+			if(e.KeyCode == Keys.NumPad0 || e.KeyCode == Keys.D0){
+				//btn_1.PerformClick();
+				Btn_0Click(btn_0,e);
+			}
+			if(e.KeyCode == Keys.Back){
+				//btn_1.PerformClick();
+				Btn_borrarClick(btn_borrar,e);
+			}
+			if(e.KeyCode == Keys.Enter){
+				//btn_1.PerformClick();
+				Btn_igualClick(btn_igual,e);
+			}
+		}
 	}
 }

@@ -42,7 +42,7 @@ namespace Calculadora
 			this.btn_punto = new System.Windows.Forms.Button();
 			this.btn_igual = new System.Windows.Forms.Button();
 			this.btn_sumar = new System.Windows.Forms.Button();
-			this.btn__3 = new System.Windows.Forms.Button();
+			this.btn_3 = new System.Windows.Forms.Button();
 			this.btn_2 = new System.Windows.Forms.Button();
 			this.btn_1 = new System.Windows.Forms.Button();
 			this.btn_restar = new System.Windows.Forms.Button();
@@ -134,16 +134,16 @@ namespace Calculadora
 			this.btn_sumar.UseVisualStyleBackColor = true;
 			this.btn_sumar.Click += new System.EventHandler(this.Btn_dividirClick);
 			// 
-			// btn__3
+			// btn_3
 			// 
-			this.btn__3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn__3.Location = new System.Drawing.Point(150, 308);
-			this.btn__3.Name = "btn__3";
-			this.btn__3.Size = new System.Drawing.Size(63, 39);
-			this.btn__3.TabIndex = 7;
-			this.btn__3.Text = "3";
-			this.btn__3.UseVisualStyleBackColor = true;
-			this.btn__3.Click += new System.EventHandler(this.Btn_0Click);
+			this.btn_3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_3.Location = new System.Drawing.Point(150, 308);
+			this.btn_3.Name = "btn_3";
+			this.btn_3.Size = new System.Drawing.Size(63, 39);
+			this.btn_3.TabIndex = 7;
+			this.btn_3.Text = "3";
+			this.btn_3.UseVisualStyleBackColor = true;
+			this.btn_3.Click += new System.EventHandler(this.Btn_0Click);
 			// 
 			// btn_2
 			// 
@@ -381,7 +381,7 @@ namespace Calculadora
 			this.Controls.Add(this.btn_5);
 			this.Controls.Add(this.btn_4);
 			this.Controls.Add(this.btn_sumar);
-			this.Controls.Add(this.btn__3);
+			this.Controls.Add(this.btn_3);
 			this.Controls.Add(this.btn_2);
 			this.Controls.Add(this.btn_1);
 			this.Controls.Add(this.btn_igual);
@@ -389,8 +389,11 @@ namespace Calculadora
 			this.Controls.Add(this.btn_0);
 			this.Controls.Add(this.btn_cambiars);
 			this.Controls.Add(this.txt_resultado);
+			this.KeyPreview = true;
 			this.Name = "MainForm";
 			this.Text = "Calculadora";
+			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainFormKeyDown);
+			this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainFormKeyPress);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
@@ -413,7 +416,7 @@ namespace Calculadora
 		private System.Windows.Forms.Button btn_restar;
 		private System.Windows.Forms.Button btn_1;
 		private System.Windows.Forms.Button btn_2;
-		private System.Windows.Forms.Button btn__3;
+		private System.Windows.Forms.Button btn_3;
 		private System.Windows.Forms.Button btn_sumar;
 		private System.Windows.Forms.Button btn_igual;
 		private System.Windows.Forms.Button btn_punto;
