@@ -248,9 +248,20 @@ namespace Calculadora
 				//btn_1.PerformClick();
 				Btn_borrarClick(btn_borrar,e);
 			}
-			if(e.KeyCode == Keys.Enter){
-				//btn_1.PerformClick();
-				Btn_igualClick(btn_igual,e);
+			//if(e.KeyCode == Keys.Enter){
+			//	btn_igual.PerformClick();
+			//}
+			if(e.KeyCode == Keys.Add){
+				btn_sumar.PerformClick();
+			}
+			if(	e.KeyCode == Keys.Multiply){
+				btn_multiplicar.PerformClick();
+			}
+			if(e.KeyCode == Keys.Divide){
+				btn_dividir.PerformClick();
+			}
+			if(e.KeyCode == Keys.Subtract){
+				btn_restar.PerformClick();
 			}
 		}
 	}
