@@ -46,6 +46,7 @@ namespace Calculadora
 		string operador="";
 		
 		calculadora calc = new calculadora();
+		
 		public MainForm()
 		{
 			//
@@ -64,9 +65,15 @@ namespace Calculadora
 			
 			if (!aux2){
 				txt_resultado.Text = "";
+				if(btn.Text == ","){
+					txt_resultado.Text = "0";
+				}
 			}
 			txt_resultado.Text += btn.Text;
-			aux2 = true;
+			if(btn.Text != "0"){
+				aux2 = true;
+			}
+			lbl_focus.Focus();
 		}
 		
 		
@@ -107,16 +114,19 @@ namespace Calculadora
 				txt_resultado.Text = Convert.ToString(a);
 				aux = true;
 				aux2 = false;
+				lbl_focus.Focus();
 		}
 		
 		void Btn_reiniciarClick(object sender, EventArgs e)
 		{
+			
 			a = 0;
 			b = 0;
 			txt_resultado.Text = "0";
 			txt_resultadoa.Text = "";
 			aux = false;
 			aux2 = false;
+			lbl_focus.Focus();
 		}
 		
 		void Btn_igualClick(object sender, EventArgs e)
@@ -143,14 +153,16 @@ namespace Calculadora
 			aux2 = false;
 			txt_resultadoa.Text = "";
 			aux = false;
+			lbl_focus.Focus();
 		}
 		
 		void Btn_cambiarsClick(object sender, EventArgs e)
 		{
 			double aux;
 			aux = Convert.ToDouble(txt_resultado.Text);
-			aux = aux*-1;
+			aux = -aux;
 			txt_resultado.Text = Convert.ToString(aux);
+			lbl_focus.Focus();
 		}
 		
 		void Btn_borrarClick(object sender, EventArgs e)
@@ -161,6 +173,7 @@ namespace Calculadora
 				txt_resultado.Text = "0";
 				aux2 = false;
 			}
+			lbl_focus.Focus();
 		}
 		
 		void Btn_raizClick(object sender, EventArgs e)
@@ -170,6 +183,7 @@ namespace Calculadora
 			a = Math.Sqrt(a);
 			txt_resultado.Text = Convert.ToString(a);
 			aux2 = false;
+			lbl_focus.Focus();
 		}
 		
 		void Btn_potenciaClick(object sender, EventArgs e)
@@ -179,6 +193,7 @@ namespace Calculadora
 			a = Math.Pow(a,2);
 			txt_resultado.Text = Convert.ToString(a);
 			aux2 = false;	
+			lbl_focus.Focus();
 		}
 		
 		void Btn_fraccionClick(object sender, EventArgs e)
@@ -188,23 +203,27 @@ namespace Calculadora
 			a = 1/a;
 			txt_resultado.Text = Convert.ToString(a);
 			aux2 = false;	
+			lbl_focus.Focus();
 		}
 		
 		void Btn_reiniciaraClick(object sender, EventArgs e)
 		{
 			txt_resultado.Text = "0";
-			aux2 = false;			
+			aux2 = false;
+			txt_resultado.Focus();
+			lbl_focus.Focus();
 		}
 		
-		void MainFormKeyPress(object sender, KeyPressEventArgs e)
-		{
-			if(e.KeyChar == Convert.ToChar(Keys.A)){
-			
-			}
-		}
 		
 		void MainFormKeyDown(object sender, KeyEventArgs e)
 		{
+			if(e.KeyCode == Keys.Enter){
+				btn_igual.Focus();
+				btn_igual.PerformClick();
+			}
+			/*if(e.KeyCode == Keys.Enter){
+				btn_igual.PerformClick();
+			}*/
 			if(e.KeyCode == Keys.NumPad1 || e.KeyCode == Keys.D1){
 				Btn_0Click(btn_1,e);
 			}
@@ -248,9 +267,6 @@ namespace Calculadora
 				//btn_1.PerformClick();
 				Btn_borrarClick(btn_borrar,e);
 			}
-			//if(e.KeyCode == Keys.Enter){
-			//	btn_igual.PerformClick();
-			//}
 			if(e.KeyCode == Keys.Add){
 				btn_sumar.PerformClick();
 			}
@@ -262,6 +278,9 @@ namespace Calculadora
 			}
 			if(e.KeyCode == Keys.Subtract){
 				btn_restar.PerformClick();
+			}
+			if(e.KeyCode == Keys.Decimal){
+				btn_punto.PerformClick();
 			}
 		}
 	}

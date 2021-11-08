@@ -62,6 +62,7 @@ namespace Calculadora
 			this.btn_reiniciara = new System.Windows.Forms.Button();
 			this.btn_porcentaje = new System.Windows.Forms.Button();
 			this.txt_resultadoa = new System.Windows.Forms.TextBox();
+			this.lbl_focus = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// txt_resultado
@@ -115,7 +116,7 @@ namespace Calculadora
 			this.btn_punto.Size = new System.Drawing.Size(63, 39);
 			this.btn_punto.TabIndex = 3;
 			this.btn_punto.TabStop = false;
-			this.btn_punto.Text = ".";
+			this.btn_punto.Text = ",";
 			this.btn_punto.UseVisualStyleBackColor = true;
 			this.btn_punto.Click += new System.EventHandler(this.Btn_0Click);
 			// 
@@ -431,11 +432,19 @@ namespace Calculadora
 			this.txt_resultadoa.TabIndex = 25;
 			this.txt_resultadoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
+			// lbl_focus
+			// 
+			this.lbl_focus.Location = new System.Drawing.Point(10, 9);
+			this.lbl_focus.Name = "lbl_focus";
+			this.lbl_focus.Size = new System.Drawing.Size(20, 11);
+			this.lbl_focus.TabIndex = 26;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(294, 404);
+			this.Controls.Add(this.lbl_focus);
 			this.Controls.Add(this.txt_resultadoa);
 			this.Controls.Add(this.btn_borrar);
 			this.Controls.Add(this.btn_reiniciar);
@@ -466,9 +475,9 @@ namespace Calculadora
 			this.Name = "MainForm";
 			this.Text = "Calculadora";
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainFormKeyDown);
-			this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainFormKeyPress);
 			this.ResumeLayout(false);
 			this.PerformLayout();
+
 		}
 		private System.Windows.Forms.TextBox txt_resultadoa;
 		private System.Windows.Forms.Button btn_porcentaje;
@@ -496,5 +505,6 @@ namespace Calculadora
 		private System.Windows.Forms.Button btn_0;
 		private System.Windows.Forms.Button btn_cambiars;
 		private System.Windows.Forms.TextBox txt_resultado;
+		private System.Windows.Forms.Label lbl_focus;
 	}
 }
