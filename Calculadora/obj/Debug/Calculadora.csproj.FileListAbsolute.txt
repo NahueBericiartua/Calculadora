@@ -12,3 +12,10 @@ C:\Users\Nahue\Documents\SharpDevelop Projects\Calculadora\Calculadora\obj\Debug
 C:\Users\Nahue\Documents\SharpDevelop Projects\Calculadora\Calculadora\bin\Debug\Calculadora.exe
 C:\Users\Nahue\Documents\SharpDevelop Projects\Calculadora\Calculadora\bin\Debug\Calculadora.pdb
 C:\Users\Nahue\Documents\SharpDevelop Projects\Calculadora\Calculadora\obj\Debug\Calculadora.pdb
+C:\Users\LAB_08\Documents\SharpDevelop Projects\Nueva carpeta\Calculadora\Calculadora\bin\Debug\Calculadora.exe
+C:\Users\LAB_08\Documents\SharpDevelop Projects\Nueva carpeta\Calculadora\Calculadora\bin\Debug\Calculadora.pdb
+C:\Users\LAB_08\Documents\SharpDevelop Projects\Nueva carpeta\Calculadora\Calculadora\obj\Debug\Calculadora.csprojResolveAssemblyReference.cache
+C:\Users\LAB_08\Documents\SharpDevelop Projects\Nueva carpeta\Calculadora\Calculadora\obj\Debug\Calculadora.calculadora.resources
+C:\Users\LAB_08\Documents\SharpDevelop Projects\Nueva carpeta\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.GenerateResource.Cache
+C:\Users\LAB_08\Documents\SharpDevelop Projects\Nueva carpeta\Calculadora\Calculadora\obj\Debug\Calculadora.exe
+C:\Users\LAB_08\Documents\SharpDevelop Projects\Nueva carpeta\Calculadora\Calculadora\obj\Debug\Calculadora.pdb
